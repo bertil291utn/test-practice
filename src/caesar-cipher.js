@@ -1,12 +1,13 @@
 const caesarCipher = (text, shift) => {
   const overShift = (letter, shft) => {
-    if ((letter.charCodeAt() + shft) > 90) {
-      return String.fromCharCode((letter.charCodeAt() + shft) - 26);
+    const charVal = letter.charCodeAt() + shft;
+    if (charVal > 90 && letter.charCodeAt() < 90) {
+      return String.fromCharCode(charVal - 26);
     }
-    if ((letter.charCodeAt() + shft) > 122) {
-      return String.fromCharCode((letter.charCodeAt() + shft) - 26);
+    if (charVal > 122) {
+      return String.fromCharCode(charVal - 26);
     }
-    return String.fromCharCode(letter.charCodeAt() + shft);
+    return String.fromCharCode(charVal);
   };
 
   const newText = [];
@@ -20,4 +21,6 @@ const caesarCipher = (text, shift) => {
   return newText.join('');
 };
 
-export default caesarCipher;
+console.log(caesarCipher('bertil', 1));
+
+// export default caesarCipher;
