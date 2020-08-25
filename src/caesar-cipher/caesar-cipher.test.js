@@ -10,7 +10,7 @@ test('returns shifted letters with same case', () => {
   expect(caesarCipher(text, 1)).toEqual('Efgfoe Uif Fbtu Xbmm pg uif Dbtumf');
 });
 
-test('it doens\'t modify spaces or puntuations', () => {
+test('it doesn\'t modify spaces or punctuations', () => {
   const text = 'Didn\'t forget? Punctuations!!';
   expect(caesarCipher(text, 2)).toEqual('Fkfp\'v hqtigv? Rwpevwcvkqpu!!');
 });
