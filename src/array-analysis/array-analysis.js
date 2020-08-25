@@ -1,4 +1,3 @@
-/* eslint-disable dot-notation */
 const arrayAnalysis = (array) => {
   const response = {
     average: array.reduce((x, y) => x + y) / array.length,
