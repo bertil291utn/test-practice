@@ -1,6 +1,18 @@
 import arrayAnalysis from './array-analysis';
 
 const array = [1, 2, 3, 4];
+
+it('is an object', () => {
+  expect(arrayAnalysis(array)).toBeInstanceOf(Object);
+});
+
+it('has properties like', () => {
+  expect(arrayAnalysis(array)).toHaveProperty('average');
+  expect(arrayAnalysis(array)).toHaveProperty('length');
+  expect(arrayAnalysis(array)).toHaveProperty('max');
+  expect(arrayAnalysis(array)).toHaveProperty('min');
+});
+
 test('returns a object', () => {
   expect(arrayAnalysis(array)).toEqual({
     average: 2.5,
